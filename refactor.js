@@ -187,7 +187,13 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
-
+var callNtimes = function(num,callback) {
+for(var i= 0; i < num; i++) {
+  console.log(callback)
+  }
+};
+callNtimes(num,callback);
+ 
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -224,6 +230,8 @@ let increaseScore = function() {
 let decreaseScore = function() {
   score--;
 };
+
+//Thinking that the let may need to be inside the function
 
 // -----------------------------------------------
 

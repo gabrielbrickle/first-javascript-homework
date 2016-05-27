@@ -97,22 +97,29 @@ console.assert(isVowel("E") === true);
  */
 
 // function rovarspraket(text){
-//
-  for (var i = 0; i < text.length; i++) {
-    console.log (text[i])
-    if (isVowel(text)) {
-      return text;
-    } else {
-      return text + "o" + text;
-    }
-  }
+//   for (var i = 0; i < text.length; i++) {
+//     console.log (text[i])
+//     if (isVowel(text)) {
+//       return text;
+//     } else {
+//       return text + "o" + text;
+//     }
+//   }
+// }
+
+function rovarspraket(text){
+  // make sure the text is a string.
+
+ var newWord = text.split("").map(function(element,idx,arr) {
+   if (isVowel(element)){
+     return element
+   } else {
+     return element + "o" + element
+   }
+ });
+ return newWord.join("")
 }
 
-//INCOMPLETE
-
-
-
-console.log(translate("this is fun"));
 
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
@@ -145,27 +152,21 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  * i.e. findLongestWord("book dogs") should return "book"
  */
 
- // function longestWord(string) {
- //     var str = string.split(" ");
- //     var longest = 0;
- //     var word = null;
- //     for (var i = 0; i < str.length; i++) {
- //         var checkedLetters = "";
- //         for (var j = 0; j < str[i].length; j++) {
- //             if (/[a-zA-Z]/.test(str[i][j])) {
- //                 checkedLetters += str[i][j];
- //             }
- //         if (longest < checkedLetters.length) {
- //             longest = checkedLetters.length;
- //             word = checkedLetters;
- //             }
- //         }
- //     }
- //     return word;
- // }
-
-//INCOMPLETE
+ function findLongestWord(sentence) {
+     var sentenceSplitOnSpaces = sentence.replace("","").split(" ");
+     var longestWord = "";
+     var longestWord = "";
+     for (var i = 0; i < sentenceSplitOnSpaces.length; i++) {
+         for (var j = 0; j < str[i].length; j++) {
+             if (longestWord.length <sentenceSplitOnSpaces[i].length) {
+                 longestWord = sentenceSplitOnSpaces[i];
+             }
+         }
+             return longestWord;
+     }
+  }
 
 
-console.assert(findLongestWord("book dogs") === "book")
-console.assert(findLongestWord("don't mess with Texas") === "Texas")
+
+// console.assert(findLongestWord("book dogs") === "book")
+// console.assert(findLongestWord("don't mess with Texas") === "Texas")

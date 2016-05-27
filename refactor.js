@@ -86,7 +86,7 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
-C. Because y has a setTimeout
+// C. Because y has a setTimeout
 
 // -----------------------------------------------
 
@@ -145,8 +145,16 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
-// var spanishColor = function(colorName) {
-//   obj {spanishColor: }
+function spanishColorUsingObject (spanishColorName) {
+  var colorObject = {
+    rojo: "#ff0000"
+    blanco: "#ffffff"
+    azul: "#0000ff"
+    verde: "#00ff00"
+    negro: "#000000"
+  }
+  return colorObject[spanishColorName]
+}
 
 // -----------------------------------------------
 
@@ -188,12 +196,17 @@ var callTenTimes = function(callback) {
 // Put your answer below -------------------------
 
 var callNtimes = function(num,callback) {
+  var num = 0;
 for(var i= 0; i < num; i++) {
   console.log(callback)
   }
 };
 callNtimes(num,callback);
- 
+
+
+
+
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -221,17 +234,18 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
-var score = 0;
 
-let increaseScore = function() {
+
+var increaseScore = function() {
+  var score = 0;
   score++;
 };
 
-let decreaseScore = function() {
+var decreaseScore = function() {
+  var score = 0;
   score--;
 };
 
-//Thinking that the let may need to be inside the function
 
 // -----------------------------------------------
 
@@ -251,12 +265,11 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+
 var addNumbers = function(numberA, numberB) {
-
-  var twoPlusTwo = addNumbers(2,2);
-  console.log(numberA + numberB);
+  var twoPlusTwo = 0;
+  return (numberA + numberB);
 };
-
 var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
@@ -283,6 +296,22 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+///it's setting it to NaN beacause amount is undefined///
+
+var speed = 0;
+
+var accelerate = function(amount) {
+  if (!amount) {
+    amount = 1;
+  } else {
+    speed += amount;
+  }
+};
+accelerate();
+
+
+
+
 
 
 // -----------------------------------------------
